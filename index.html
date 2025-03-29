@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="The Web of NuExo">
+  <meta name="keywords" content="NuExo,nuexo,NUEXO,Exoskeleton,Teleoperation,Humanoid Robot Systems">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NuExo: A Wearable Exoskeleton Covering all Upper Limb ROM for Outdoor Data Collection and Teleoperation of Humanoid Robots</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+
+  <script src="static/js/jquery-3.7.1.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+
+
+  <style>
+        .navbar-menu {
+            background-color: rgba(128, 128, 128, 0.3);
+        }
+        .hero-video {
+          background-color: black;
+        }
+        .blue-text {
+            color: rgb(25, 106, 226);
+        }
+        .green-text {
+            color: rgb(0, 116, 124);
+        }
+        .yellow-text {
+            color: rgb(202, 138, 0);
+        }
+        
+</style>
+</head>
+
+
+<body>
+  <section class="hero is-link is-fullheight video" style="overflow: hidden;">
+  <div class="hero-video" style="height: 100%; width: 177.77777778vh; min-width: 100%;min-height: 50vw;">
+    <video playsinline="" autoplay="" muted="" loop="">
+      <source src=" ./static/videos/banner_video.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-video is-hidden-tablet is-inline-block-mobile" style="height: 100%; width: 100%;">
+    <video playsinline="" autoplay="" muted="" loop="">
+      <source src=" ./static/videos/banner_video.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="overlay"></div>
+  <div class="hero-head">
+    <header class="navbar-menu">
+      <div class="container is-size-5" style="max-width: 500px; margin: 0 auto;">
+        <div class="navbar-start" style="flex-grow: 1; justify-content: center; gap: 20px;">
+          <a class="navbar-item bilibili-hover" href="https://www.bilibili.com/video/BV1x7QNYtEwy/" target="_blank" style="justify-content: center;">
+            <span class="icon" style="margin-right:5px;">
+              <img src="./static/images/bilibili.svg">
+            </span>
+            <span class="hover-text"></span>
+          </a>
+          <a class="navbar-item" href="#ENvideo" style="justify-content: center;">
+            <span class="icon" style="margin-right:5px;">
+              <img src="./static/images/videologo.svg">
+            </span>
+            <span>Video (EN)</span>
+          </a>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title is-1 publication-title is-size-1-mobile" style="font-size: 5rem;">
+        NuExo
+      </h1>
+      <h1 class="title is-1 publication-title is-size-1-mobile" style="font-size: 3rem;">
+        A Wearable Exoskeleton Covering all Upper Limb ROM for Outdoor Data Collection and Teleoperation of Humanoid Robots
+        <br><br><br>
+      </h1>
+    </div>
+  </div>
+
+  <div class="hero-foot is-hidden-mobile">
+    <div class="container has-text-centered">
+      <h1 class="title" style="font-size: 1.5rem;">
+        ▼ Scroll down the page to find more ▼<br><br>
+      </h1>
+    </div>
+  </div>
+</section>
+
+
+
+
+<body>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" id = "nubot"href="https://github.com/nubot-nudt" target="_blank">
+      NuBot&nbsp
+      <span class="icon">
+        <i class="fab fa-github"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://ieeexplore.ieee.org/document/10740802" target="_blank">
+            NuBot_Rafiki: Homo-Hetero Teleoperation
+          </a>
+          <a class="navbar-item" href="https://arxiv.org/abs/2503.01338v1" target="_blank">
+            NuBot_Rafiki: Flexible Exoskeleton Control
+          </a>
+          <a class="navbar-item">
+            NuExo Patent 1: ZL 2025 1 0043892.1
+          </a>
+          <a class="navbar-item">
+            NuExo Patent 2: ZL 2025 1 0043930.3
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">NuExo: A Wearable Exoskeleton Covering all Upper Limb ROM for Outdoor Data Collection and Teleoperation of Humanoid Robots</h1>
+          <div class="is-size-4 publication-authors">
+              <span class="author-block"><a href="mailto:zhongrui19@nudt.edu.cn" target="_blank">Rui Zhong</a><sup>*</sup>,</span>
+              <span class="author-block"><a href="NONE" target="_blank">Chuang Cheng</a><sup>*</sup>,</span>
+              <span class="author-block"><a href="NONE" target="_blank">Junpeng Xu</a>,</span>
+              <span class="author-block"><a href="NONE" target="_blank">Yantong Wei</a>,</span>
+              <span class="author-block"><a href="NONE" target="_blank">Ce Guo</a>,</span>
+              <span class="author-block"><a href="NONE" target="_blank">Daoxun Zhang</a>,</span>
+              <span class="author-block"><a href="NONE" target="_blank">Wei Dai</a><sup>†</sup>,</span>
+              <span class="author-block"><a href="NONE" target="_blank">Huimin Lu</a><sup>†</sup></span>
+          </div>
+
+          <div class="is-size-9 publication-authors">
+            <span class="author-block">* Equal Contribution  &nbsp;&nbsp; &nbsp;&nbsp;   † Corresponding Authors</span>
+          </div>
+
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">National University of Defense Technology<small><br>College of Intelligence Science and Technology<br>The National Key Laboratory of Equipment State Sensing and Smart Support</small></span>
+          </div>
+
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF -->
+              <span class="link-block">
+                <a href="static/pdfs/NuExo.pdf" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                <span>Paper</span>
+                </a>
+              </span>
+
+              <!-- ArXiv Link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2503.10554" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="ai ai-arxiv"></i></span>
+                <span>arXiv</span>
+                </a>
+              </span>
+
+              <!-- bilibili Link -->
+              <span class="link-block">
+                <a href="https://www.bilibili.com/video/BV1x7QNYtEwy/" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon" style="margin-right:5px;">
+                  <img src="./static/images/bilibili.svg">
+                </span>
+                <span>Bilibili</span>
+                </a>
+              </span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            The evolution from motion capture and teleoperation to robot skill learning has emerged as a hotspot and critical pathway for advancing embodied intelligence. 
+            However, existing systems still face a persistent gap in simultaneously achieving four objectives: 
+            accurate tracking of full upper limb movements over extended durations <b>(Accuracy)</b>, 
+            ergonomic adaptation to human biomechanics <b>(Comfort)</b>, 
+            versatile data collection (e.g., force data) and compatibility with humanoid robots <b>(Versatility)</b>, 
+            and lightweight design for outdoor daily use <b>(Convenience)</b>. 
+            We present a wearable exoskeleton system, incorporating user-friendly immersive teleoperation and multi-modal sensing collection to bridge this gap. 
+            Due to the features of a novel shoulder mechanism with synchronized linkage and timing belt transmission, this system can adapt well to compound shoulder movements and replicate <b>100% coverage </b>of natural upper limb motion ranges. 
+            Weighing 5.2kg, NuExo supports backpack-type use and can be conveniently applied in daily outdoor scenarios. 
+            urthermore, we develop a unified intuitive teleoperation framework and a comprehensive data collection system integrating multi-modal sensing for various humanoid robots. 
+            Experiments across distinct humanoid platforms and different users validate our exoskeleton's superiority in motion range and flexibility, while confirming its stability in data collection and teleoperation accuracy in dynamic scenarios. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" id="ENvideo">Video</h2>
+        <div class="publication-video" >
+          <iframe src="./static/videos/video0.mp4"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Video. -->
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      
+      <div class="column is-full-width">
+        <!-- Overview of NuExo -->
+        <h2 class="title is-3" id = "overview">Overview of NuExo</h2>
+        <h3 class="title is-4">Components of NuExo</h3>
+        <div class="content has-text-justified">
+          <p>
+            The the NuExo can be
+            divided into the following major components: the upper limb exoskeleton main body, the manipulated humanoid robot, 
+            the visual display and acquisition module, and the control and battery unit.
+            As the core of the system, the upper limb exoskeleton integrates shoulder, elbow, wrist, and hand-mounted data glove modules.
+            The total weight of the exoskeleton is 5.2 kg and is made mainly of carbon fiber plates and 3D printed PLA plastic components.
+          </p>
+        </div>
+        <div class="column is-full-width">
+          <img src="static/images/overview.png" alt="overview"/>
+          <h2 class="subtitle has-text-centered">
+            <br>
+          </h2>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            The sky-blue parts of the arm in the model 
+            denote binding interfaces housing six-axis force sensors, which connect users to the exoskeleton.
+            These sensors collect upper limb kinetic data during operation-a feature absent in most existing systems-and
+            synergize with our collaborative control algorithm to enable floating assistive motion, significantly
+            enhancing operational flexibility.<br><br>
+            This system uniquely supports simultaneous acquisition of:
+            (1) robotic teleoperation data, (2) human upper limb kinematic data, (3) first-person-view motion videos,
+            (4) finger motion data, (5) odometry data, (6) upper limb force feedback. 
+            To our knowledge, this represents <b>the most comprehensive multimodal data collection platform for humanoid robot upper limb
+            studies</b>, with outdoor mobility further expanding its spatial and temporal scalability.<br><br>
+          </p>
+        </div>
+
+        <h3 class="title is-4">NuExo in Daily Scene</h3>
+        <div class="content has-text-justified">
+        <p>
+          The NuExo is ergonomically designed to fit well with the human arm while being lightweight, allowing wearers to comfortably use
+          the NuExo in daily life scenarios. The richness of NuExo usage scenarios also improves the richness of data, brings more possibilities
+          to learning algorithms<br>
+        </p>
+        </div>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+              <video playsinline="" autoplay="" muted="" loop="">
+                <source src="./static/videos/outdoor.mp4" type="video/mp4">
+              </video>
+          </div>
+        </div>
+        <!--/ Overview of NuExo -->
+
+        <br><br>
+
+        <!-- Innovative Design of Structure and Control -->
+        <h2 class="title is-3" id = "design">Innovative Design of Structure and Control</h2>
+
+        <!-- The Shoulder Structure Design -->
+        <h3 class="title is-4">The Shoulder Structure Design</h3>
+        <div class="content has-text-justified">
+        <p>
+          The human shoulder can be conceptualized as a spherical hinge structure with three degrees of freedom.
+          The geometric center of this spherical hinge is commonly regarded as the Glenohumeral (GH) joint.
+          Nevertheless, during natural human movement, this geometric center is <b>not stationary relative to the body but
+          rather exhibits a certain degree of movement freedom</b>. Most exoskeleton systems have neglected this aspect,
+          leading to a misalignment between the shoulder movement center of the exoskeleton and GH joint.
+          <br><br>
+          Our findings indicate that the horizontal movement of the GH joint is closely associated with the movement of
+          the upper arm. When the human upper arm rotates naturally without deliberately moving the shoulder,
+          GH joint will also move accordingly. This observation suggests that one DOF of the shoulder spherical hinge and the
+          DOF of the forward (or backward) movement of GH joint are not entirely independent, but rather have a mapping relationship.
+          Consequently, we can utilize a mechanical transmission structure to combine these two degrees of freedom into one.
+          By doing so, we can <b>reduce the number of driving motors without sacrificing the tracking performance</b>,
+          ultimately decreasing the weight of the exoskeleton.
+        </p>
+        </div>
+        <div class="item">
+          <img src="static/images/GH1-1.png" alt="GH1-1"/>
+          <h2 class="subtitle has-text-centered">
+            <br>
+          </h2>
+        </div>
+
+
+        <div class="columns is-vcentered interpolation-panel">
+
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper1">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider1"
+                   step="1" min="0" max="200" value="0" type="range">
+            <p class="is-bold">&#x27F9; Move the slider to see the motion</p>
+          </div>
+          <div class="column is-8 has-text-centered">
+            <img src="./static/images/GH1-2.png"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+                <p>NuExo tracks the GH joint horizontally <span class="blue-text">(Shoulder Flexion/Extension)</span></p>
+          </div>
+        </div>
+        <br/>
+        <div class="content has-text-justified">
+          <p>
+            In addition to the protraction-retraction movement, GH joint also undergoes elevation-depression movement when the arm is raised. To compensate for this movement,
+            we have designed the structure shown below. This structure allows the exoskeleton to adapt to the dynamic changes in the vertical position of GH joint.
+          </p>
+          </div>
+        <div class="item">
+          <img src="static/images/GH2-1.png" alt="GH2-1"/>
+          <h2 class="subtitle has-text-centered">
+            <br>
+          </h2>
+        </div>
+
+        <div class="columns is-vcentered interpolation-panel">
+
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper2">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider2"
+                   step="1" min="0" max="200" value="0" type="range">
+            <p class="is-bold">&#x27F9; Move the slider to see the motion</p>
+          </div>
+          <div class="column is-8 has-text-centered">
+            <img src="./static/images/GH2-2.png"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+                 <p>NuExo tracks the GH joint vertically <span class="blue-text">(Shoulder Adduction/Abduction)</span></p>
+            
+          </div>
+        </div>
+
+        <div class="content has-text-justified">
+          <p>
+            <br>
+            We reposition a motor of the shoulder joint to the elbow. 
+            This strategic relocation effectively eliminates the potential interference between
+            the motor and the human head during arm elevation, a common issue in many conventional designs.
+          </p>
+        </div>
+
+        <div class="columns is-vcentered interpolation-panel">
+
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper3">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider3"
+                   step="1" min="0" max="200" value="0" type="range">
+            <p class="is-bold">&#x27F9; Move the slider to see the motion</p>
+          </div>
+          <div class="column is-8 has-text-centered">
+            <img src="./static/images/GH3-1.png"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+                 <p>NuExo tracks the GH joint at the elbow <span class="blue-text">(Shoulder Interior/Exterior Rotation)</span></p>
+            
+          </div>
+        </div>
+
+        <div class="content has-text-justified">
+          <p>
+            <br>
+            These three innovative approachenables us to utilize <b>only one motor on the shoulder</b>. In contrast, traditional
+            exoskeleton systems equipped with three actively driven degrees of freedom in the shoulder lack such a
+            streamlined and efficient design. Through this distinctive design, our exoskeleton attains an
+            impressively wide ROM.
+          </p>
+        </div>
+        <!--/ The Shoulder Structure Design -->
+
+        <br><br>
+        
+        <!-- The Unified Teleoperation Control for Humanoid Robot -->
+        <h3 class="title is-4">The Unified Teleoperation Control for Humanoid Robot</h3>
+        <div class="content has-text-justified">
+          <p>
+            The control system software comprises four modular components: <b>exoskeleton node, humanoid robot
+            node, teleoperation controller node,</b> and <b>low-level driven node</b> of the humanoid robot.
+            By changing the low-level driven node of the humanoid robot, it can control another humanoid robot;
+            by concurrently opening multiple identical control nodes, it can control several robots simultaneously.
+          </p>
+        </div>
+        <div class="column is-full-width">
+          <img src="static/images/control.png" alt="overview">
+        </div>
+        <!--/ The Unified Teleoperation Control for Humanoid Robot -->
+        <!--/ Innovative Design of Structure and Control -->
+
+        <br><br>
+
+        <!-- Evaluation and Experiments -->
+        <h2 class="title is-3" id = "design">Evaluation and Experiments</h2>
+
+        <!-- Exoskeleton ROM Assessment -->
+        <h3 class="title is-4">Exoskeleton ROM Assessment</h3>
+
+        <div class="content has-text-justified">
+          <p>
+            When wearing NuExo, user's shoulder can achieve 180° of flexion and 60° of extension, 30° of adduction and 150° of abduction.
+            User can easily raise their arms above their heads. Horizontal flexion and extension can reach 30° and 135°
+            respectively. In the video, we demonstrated that it can still reach the abovementioned ranges when
+            performing circular motions. The results demonstrate that the exoskeleton preserves substantial upper limb ROM
+            when worn, including all of the natural arm movement patterns.
+          </p>
+        </div>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: stretch">
+          <div class="image" style="width: 49%; height: 100%">
+            <img src="static/images/exp1.png" alt="overview" 
+                 style="width: 100%; height: 100%; object-fit: contain"> 
+          </div>
+          <div class="video" style="width: 50%; height: 100%"> 
+            <video playsinline autoplay muted loop
+                   style="width: 100%; height: 100%; object-fit: contain"> 
+              <source src="./static/videos/exp1.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <!--/ Exoskeleton ROM Assessment -->
+
+        <br><br>
+
+        <!-- Human Manipulation Data Acquisition with NuExo -->
+        <h3 class="title is-4">Human Manipulation Data Acquisition with NuExo</h3>
+
+        <div class="content has-text-justified">
+          <p>
+            As a motion capture device, NuExo is capable of collecting a wealth of human task operation data.
+            This includes:<br>  
+            &emsp;▶ The position and velocity data of a single arm with 9 DOF<span class="green-text"> (2 DOF for the GH joint
+            + 3 DOF for the shoulder + 1 DOF for the elbow + 3 DOF for the wrist)</span>;<br>
+            &emsp;▶ The grasping data of a single palm with 6 degrees of freedom;<br>
+            &emsp;▶ The posture data of the waist with 3 DOF;<br>
+            &emsp;▶ First - person video information and depth data;<br>
+            &emsp;▶ inertial odometry data;<br>
+            &emsp;▶ The  <b>six - dimensionaldata of the interaction force</b> between the upper arm, forearm and NuExo.
+          </p>
+        </div>
+        <div class="container" style="display: flex; justify-content: space-between;">
+
+          <div class="video"style="max-width:100%; height: auto;">
+            <video playsinline="" autoplay="" muted="" loop=""style="border-radius: 10px;">
+              <source src="./static/videos/exp2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <!--/ Human Manipulation Data Acquisition with NuExo -->
+
+      <br><br>
+
+      <!-- Comparison of Data Collection Accuracy with IMC -->
+      <h3 class="title is-4">Comparison of Data Collection Accuracy with IMC</h3>
+
+      <div class="content has-text-justified">
+        <p>
+          Inertial motion capture (IMC) system is one of the few devices that can provide untethered operation, extended mobility, portability,
+          and multi-joint pose tracking, similar to our exoskeleton. Therefore, we conduct a comparison experiment on the data
+          collection accuracy between NuExo and a commercial IMC system.
+          Experimental results show that NuExo demonstrates better performance than IMC in <b>long-term data stability,
+            data accuracy, and signal noise</b>.
+        </p>
+      </div>
+      <div class="container" style="display: flex; justify-content: space-between;">
+
+        <div class="container" style="display: flex; justify-content: space-between;">
+          <div class="image-container" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+            <img src="static/images/exp3.png" alt="exp3 fig" style="width: 60%;">
+            <h2 class="content has-text-centered" style="width: 60%;">
+              (a) Standard movements.
+              (b) Comparison of shoulder joint posture data between two systems before perturbation.
+              (c) Comparison after perturbation.
+              (d) Comparison of data noise.
+            </h2>
+          </div>
+        </div>
+      </div>
+      <!--/ Comparison of Data Collection Accuracy with IMC -->
+
+      <br><br>
+
+      <!-- NuExo's Performance in Teleoperation Scenarios -->
+      <h3 class="title is-4">NuExo's Performance in Teleoperation Scenarios</h3>
+
+      <div class="content has-text-justified">
+        <p>
+          With the NuExo, the operator can control the robot to use an electric screwdriver to tighten a screw
+          (the diameter of the screw head is merely 2.5 mm). The operator is even able to control the switch of
+          the electric screwdriver <b>with fingers</b>. In high-dynamic motion tracking experiments, operators can also maneuver
+          the robot to accurately throw a ball
+          into a box located 1.2 meters away. We let different operators utilize the NuExo to control various robots for
+          the completion of the different tasks, the operators could effortlessly finish the task without undergoing prior training.
+          NuExo enables direct utilization of the human arm, which is the <span class="green-text">most dexterous manipulator in nature</span>,
+          as a controller to guide robots through sophisticated operations.
+        </p>
+      </div>
+      
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          
+          <div class="item">
+            <div class="caption-external">
+              <h3 class="caption-title">
+                High-Dynamic Tasks<br>
+                <span class="green-text"><small>Robot 1 & Different Operators</small></span>
+              </h3>
+            </div>
+            <div class="video-hover-container">
+              <video playsinline autoplay muted loop>
+                <source src="./static/videos/exp4-1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+      
+          <div class="item">
+            <div class="caption-external">
+              <h3 class="caption-title">
+                Fine Manipulation Task<br>
+                <span class="green-text"><small>Robot 1 & Unscrew the Bottle Cap</small></span>
+              </h3>
+            </div>
+            <div class="video-wrapper">
+              <video playsinline autoplay muted loop>
+                <source src="./static/videos/exp4-2-1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="caption-external">
+              <h3 class="caption-title">
+                Fine Manipulation Tasks<br>
+                <span class="green-text"><small>Robot 2 & Unscrew the Bottle Cap</small></span>
+              </h3>
+            </div>
+            <div class="video-wrapper">
+              <video playsinline autoplay muted loop>
+                <source src="./static/videos/exp4-2-2.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+      
+          <div class="item">
+            <div class="caption-external">
+              <h3 class="caption-title">
+                Fine Manipulation Task<br>
+                <span class="green-text"><small>Robot 1 & Use Electric Screwdriver</small></span>
+              </h3>
+            </div>
+            <div class="video-wrapper">
+              <video playsinline autoplay muted loop>
+                <source src="./static/videos/exp4-3.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+
+      <br><br>
+
+      <div class="caption-external">
+        <h3 class="caption-title">
+          Simultaneous Control of Multiple Robot Platforms<br>
+          <span class="green-text"><small>Build a Bridge between Humans and Robots!</small></span>
+        </h3>
+      </div>
+      <div class="container">
+        <div class="video" style="width: 100%; height: auto;">
+          <video playsinline="" autoplay="" muted="" loop="" style="border-radius: 10px;">
+            <source src="./static/videos/exp4-4.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+
+      <!--/ NuExo's Performance in Teleoperation Scenarios -->
+
+      <br><br>
+
+      <!-- Conclusions -->
+      <h2 class="title is-3" id = "design">Conclusions</h2>
+      <div class="content has-text-justified">
+        <p>
+          In this paper, we present an innovative development: a lightweight, backpack-style exoskeleton robot,
+          along with the construction of a generalized immersive humanoid robot teleoperation system and an upper
+          limb multi-modal data collection system. Our ingenious shoulder design has completely solved the problem
+          of <b>motor placement at the shoulder joints of active exoskeletons that consider shoulder anatomy</b>. This enables
+          the key concept (shoulder anatomical motion compensation) of the upper limb exoskeleton to be developed in a
+          backpack-type design for the first time. According to the experiments, the ROM of the user's upper limbs and
+          their daily movements remain unaffected when wearing NuExo. This verifies the comfort and the effectiveness of
+          our exoskeleton design. Moreover, users can <b>operate different humanoid robots to complete complex tasks without
+          training</b>, which validates the versatility and superior teleoperation ability of NuExo. Its data accuracy and
+          long-term stability have been confirmed through operational data collection comparison, and our multi-modal
+          sensing data (integrated force) is more comprehensive than that of the existing operation device. In the future, we intend to explore the effectiveness of combining various types of data
+          in the skill learning of humanoid robots.
+        </p>
+      </div>
+      <!--/ Conclusions -->
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" style="background: rgba(0, 0, 0, 0.07)">
+  <div class="cb-carousel">
+    <div class="caption-external">
+      <h3 class="caption-title">
+        The Robot Platforms Currently Supported by NuExo:<br>
+        <small>Unitree G1, NuBot Timon, Ti5 Robot, ....</small><br>
+        <span class="yellow-text"><small>- We warmly welcome your integration! -</small></span>
+      </h3>
+    </div>
+    <div class="cb-slides">
+        <div class="cb-slide">
+            <img src="./static/images/robot1.png" alt="图片1">
+            <div class="cb-mask"><b>Unitree G1</b></div>
+        </div>
+        <div class="cb-slide">
+            <img src="./static/images/robot2.png" alt="图片2">
+            <div class="cb-mask"><b>NuBot Timon</b></div>
+        </div>
+        <div class="cb-slide">
+            <img src="./static/images/robot3.png" alt="图片3">
+            <div class="cb-mask"><b>Ti5 Robot</b></div>
+        </div>
+        <div class="cb-slide">
+            <img src="./static/images/robot4.png" alt="图片4">
+            <div class="cb-mask"><b>And Your Robot!</b></div>
+        </div>
+    </div>
+  
+    <button class="cb-arrow cb-prev">❮</button>
+    <button class="cb-arrow cb-next">❯</button>
+      <h3 class="content has-text-centered">
+        <br>
+        <b>If you have any questions or want NuExo to be compatible with your robot platform, 
+        please <a href="mailto:zhongrui19@nudt.edu.cn" target="_blank">▶contact us◀</a></b>
+    
+      </h3>
+  </div>
+</footer>
+
+
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      @misc{zhong2025nuexowearableexoskeletoncovering,
+        title={NuExo: A Wearable Exoskeleton Covering all Upper Limb ROM for Outdoor Data Collection and Teleoperation of Humanoid Robots}, 
+        author={Rui Zhong and Chuang Cheng and Junpeng Xu and Yantong Wei and Ce Guo and Daoxun Zhang and Wei Dai and Huimin Lu},
+        year={2025},
+        eprint={2503.10554},
+        archivePrefix={arXiv},
+        primaryClass={cs.RO},
+        url={https://arxiv.org/abs/2503.10554}, 
+  }
+</code></pre>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>. Modified upon original <a href="https://nerfies.github.io/"target="_blank"> Nerfies </a> website
+            (<a href="https://github.com/nerfies/nerfies.github.io" target="_blank">source</a>) and <a href="https://umi-on-legs.github.io/" target="_blank">UMI on Legs</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
