@@ -65,16 +65,41 @@
 
 <body>
   <section class="hero is-link is-fullheight video" style="overflow: hidden;">
-  <div class="hero-video" style="height: 100%; width: 177.77777778vh; min-width: 100%;min-height: 50vw;">
-    <video playsinline="" autoplay="" muted="" loop="">
-      <source src=" ./static/videos/banner_video.mp4" type="video/mp4">
+  <div class="hero-video" style="
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ">
+    <video playsinline autoplay muted loop style="
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    ">
+      <source src="./static/videos/banner_video.mp4" type="video/mp4">
     </video>
   </div>
-  <div class="hero-video is-hidden-tablet is-inline-block-mobile" style="height: 100%; width: 100%;">
-    <video playsinline="" autoplay="" muted="" loop="">
-      <source src=" ./static/videos/banner_video.mp4" type="video/mp4">
-    </video>
-  </div>
+  
+  <div class="hero-video is-hidden-tablet is-inline-block-mobile" style="
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+">
+  <video playsinline autoplay muted loop style="
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  ">
+    <source src="./static/videos/banner_video.mp4" type="video/mp4">
+  </video>
+</div>
   <div class="overlay"></div>
   <div class="hero-head">
     <header class="navbar-menu">
@@ -99,19 +124,19 @@
 
   <div class="hero-body">
     <div class="container has-text-centered">
-      <h1 class="title is-1 publication-title is-size-1-mobile" style="font-size: 5rem;">
+      <h1 class="title is-1 publication-title is-size-8-mobile" style="font-size: 5rem;">
         NuExo
       </h1>
-      <h1 class="title is-1 publication-title is-size-1-mobile" style="font-size: 3rem;">
+      <h1 class="title is-1 publication-title is-size-5-mobile" style="font-size: 3rem;">
         A Wearable Exoskeleton Covering all Upper Limb ROM for Outdoor Data Collection and Teleoperation of Humanoid Robots
         <br><br><br>
       </h1>
     </div>
   </div>
 
-  <div class="hero-foot is-hidden-mobile">
+  <div class="hero-foot">
     <div class="container has-text-centered">
-      <h1 class="title" style="font-size: 1.5rem;">
+      <h1 class="title  is-size-7-mobile" style="font-size: 1.5rem;">
         ▼ Scroll down the page to find more ▼<br><br>
       </h1>
     </div>
@@ -170,8 +195,8 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-2 publication-title">NuExo: A Wearable Exoskeleton Covering all Upper Limb ROM for Outdoor Data Collection and Teleoperation of Humanoid Robots</h1>
-          <div class="is-size-4 publication-authors">
+          <h1 class="title is-2 publication-title is-size-3-mobile">NuExo: A Wearable Exoskeleton Covering all Upper Limb ROM for Outdoor Data Collection and Teleoperation of Humanoid Robots</h1>
+          <div class="is-size-4 publication-authors is-size-5-mobile">
               <span class="author-block"><a href="mailto:zhongrui19@nudt.edu.cn" target="_blank">Rui Zhong</a><sup>*</sup>,</span>
               <span class="author-block"><a href="NONE" target="_blank">Chuang Cheng</a><sup>*</sup>,</span>
               <span class="author-block"><a href="NONE" target="_blank">Junpeng Xu</a>,</span>
@@ -182,11 +207,11 @@
               <span class="author-block"><a href="NONE" target="_blank">Huimin Lu</a><sup>†</sup></span>
           </div>
 
-          <div class="is-size-9 publication-authors">
+          <div class="is-size-9 publication-authors is-size-7-mobile">
             <span class="author-block">* Equal Contribution  &nbsp;&nbsp; &nbsp;&nbsp;   † Corresponding Authors</span>
           </div>
 
-          <div class="is-size-4 publication-authors">
+          <div class="is-size-4 publication-authors is-size-6-mobile">
             <span class="author-block">National University of Defense Technology<small><br>College of Intelligence Science and Technology<br>The National Key Laboratory of Equipment State Sensing and Smart Support</small></span>
           </div>
 
@@ -509,13 +534,13 @@
           <p>
             As a motion capture device, NuExo is capable of collecting a wealth of human task operation data.
             This includes:<br>  
-            &emsp;▶ The position and velocity data of a single arm with 9 DOF<span class="green-text"> (2 DOF for the GH joint
+            ▶ The position and velocity data of a single arm with 9 DOF<span class="green-text"> (2 DOF for the GH joint
             + 3 DOF for the shoulder + 1 DOF for the elbow + 3 DOF for the wrist)</span>;<br>
-            &emsp;▶ The grasping data of a single palm with 6 degrees of freedom;<br>
-            &emsp;▶ The posture data of the waist with 3 DOF;<br>
-            &emsp;▶ First - person video information and depth data;<br>
-            &emsp;▶ inertial odometry data;<br>
-            &emsp;▶ The  <b>six - dimensionaldata of the interaction force</b> between the upper arm, forearm and NuExo.
+            ▶ The grasping data of a single palm with 6 degrees of freedom;<br>
+            ▶ The posture data of the waist with 3 DOF;<br>
+            ▶ First - person video information and depth data;<br>
+            ▶ inertial odometry data;<br>
+            ▶ The  <b>six - dimensionaldata of the interaction force</b> between the upper arm, forearm and NuExo.
           </p>
         </div>
         <div class="container" style="display: flex; justify-content: space-between;">
@@ -546,8 +571,8 @@
 
         <div class="container" style="display: flex; justify-content: space-between;">
           <div class="image-container" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
-            <img src="static/images/exp3.png" alt="exp3 fig" style="width: 60%;">
-            <h2 class="content has-text-centered" style="width: 60%;">
+            <img src="static/images/exp3.png" alt="exp3 fig" >
+            <h2 class="content has-text-centered" >
               (a) Standard movements.
               (b) Comparison of shoulder joint posture data between two systems before perturbation.
               (c) Comparison after perturbation.
@@ -581,7 +606,7 @@
           
           <div class="item">
             <div class="caption-external">
-              <h3 class="caption-title">
+              <h3 class="caption-title is-size-8-mobile">
                 High-Dynamic Tasks<br>
                 <span class="green-text"><small>Robot 1 & Different Operators</small></span>
               </h3>
@@ -697,19 +722,19 @@
     </div>
     <div class="cb-slides">
         <div class="cb-slide">
-            <img src="./static/images/robot1.png" alt="图片1">
+            <img src="./static/images/robot1.png" alt="robot1">
             <div class="cb-mask"><b>Unitree G1</b></div>
         </div>
         <div class="cb-slide">
-            <img src="./static/images/robot2.png" alt="图片2">
+            <img src="./static/images/robot2.png" alt="robot2">
             <div class="cb-mask"><b>NuBot Timon</b></div>
         </div>
         <div class="cb-slide">
-            <img src="./static/images/robot3.png" alt="图片3">
+            <img src="./static/images/robot3.png" alt="robot3">
             <div class="cb-mask"><b>Ti5 Robot</b></div>
         </div>
         <div class="cb-slide">
-            <img src="./static/images/robot4.png" alt="图片4">
+            <img src="./static/images/robot4.png" alt="robot4">
             <div class="cb-mask"><b>And Your Robot!</b></div>
         </div>
     </div>

@@ -207,18 +207,31 @@ body {
 }
 
 
+.image-container img {
+  width: 50%;
+}
+
+.image-container h2 {
+  width: 60%;
+  text-align: center;
+}
+
 
 
 
         /* 修复后的样式 */
         .cb-carousel {
-            position: relative;
-            width: 40%;
-            height: auto;
-            margin: 50px auto;
-            overflow: hidden;
-            border-radius: 10px;
-        }
+          position: relative;
+          /* 初始宽度，适用于大屏幕设备 */
+          width: 40%;
+          height: auto;
+          margin: 50px auto;
+          overflow: hidden;
+          border-radius: 10px;
+      }
+      
+      /* 媒体查询，当屏幕宽度小于 768px 时（一般为手机屏幕） */
+
 
         .cb-slides {
             display: flex;
@@ -257,7 +270,7 @@ body {
             justify-content: center;
             align-items: center;
             color: white;
-            font-size: 60px;
+            font-size: 3rem;
             pointer-events: none;
         }
 
@@ -287,3 +300,24 @@ body {
             right: 0;
             border-radius: 5px 0 0 5px;
         }
+
+
+        @media (max-width: 768px) {
+          .cb-carousel {
+              /* 在手机屏幕上设置为 90% 的宽度 */
+              width: 100%;
+          }
+
+          .caption-title {
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+   
+          }
+          .image-container img {
+            width: 100%;
+          }
+
+          .image-container h2 {
+            width: 100%;
+          }
+      }
