@@ -200,7 +200,7 @@ body {
 }
 
 #interpolation-image-wrapper {
-  width: 60%;
+  width: 100%;
 }
 #interpolation-image-wrapper img {
   border-radius: 5px;
