@@ -82,7 +82,7 @@
       <source src="./static/videos/banner_video.mp4" type="video/mp4">
     </video>
   </div>
-  
+
   <div class="hero-video is-hidden-tablet is-inline-block-mobile" style="
   height: 100vh;
   width: 100vw;
@@ -284,13 +284,14 @@
     <!-- Video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3" id="ENvideo">Video</h2>
-        <div class="publication-video" >
-          <iframe src="./static/videos/video0.mp4"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
+          <h2 class="title is-3" id="ENvideo">Video</h2>
+          <div class="publication-video">
+              <video src="./static/videos/video0.mp4" controls muted>
+                  Your browser does not support the video tag.
+              </video>
+          </div>
       </div>
-    </div>
+  </div>
     <!--/ Video. -->
 
   </div>
@@ -775,16 +776,27 @@
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
+          <div class="image-wrapper" style="text-align: center">
+            <a href="https://clustrmaps.com/site/1c57r" target="_blank" title="ClustrMaps">
+              <img src="//www.clustrmaps.com/map_v2.png?d=wNvXlynqNlocJmmCdrKmstq2w-5sBj3BFunWPcTiRJQ&cl=ffffff" />
+            </a>
+          </div>
+
           <p>
             This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>. Modified upon original <a href="https://nerfies.github.io/"target="_blank"> Nerfies </a> website
             (<a href="https://github.com/nerfies/nerfies.github.io" target="_blank">source</a>) and <a href="https://umi-on-legs.github.io/" target="_blank">UMI on Legs</a>.
           </p>
+          
         </div>
       </div>
     </div>
   </div>
 </footer>
+
+
+<!-- <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=wNvXlynqNlocJmmCdrKmstq2w-5sBj3BFunWPcTiRJQ&cl=ffffff&w=a"></script> -->
+
 
 </body>
 </html>

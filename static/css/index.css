@@ -304,7 +304,6 @@ body {
 
         @media (max-width: 768px) {
           .cb-carousel {
-              /* 在手机屏幕上设置为 90% 的宽度 */
               width: 100%;
           }
 
@@ -320,4 +319,8 @@ body {
           .image-container h2 {
             width: 100%;
           }
+          .cb-mask {
+            font-size: 2rem;
+
+        }
       }
